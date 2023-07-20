@@ -9,11 +9,12 @@ def encode_password(password):
 		encoded_password += encoded_i
 	return encoded_password
 
+#Lucas Nardin decode() function
 def decode_password(encoded_password):
-	decoded_password = ""
-	for i in encoded_password:
+	decoded_password = ''
+	for i in encoded_password:   #revert numbers to their original values
 		decoded_i = str(int(i) - 3)
-		if int(decoded_i) < 0:
+		if int(decoded_i) < 0:   #numbers can only be from 0-9
 			decoded_i = str(int(decoded_i) + 10)
 		decoded_password += decoded_i
 	return decoded_password
